@@ -1,0 +1,72 @@
+#include <iostream>
+using namespace std;
+void Calculator()
+{
+  // use while  loop for  itrations
+
+  bool lop;
+  lop = true;
+  while (lop)
+  {
+    // declare variables
+    float val1, val2, result;
+        string methord;
+    cout << " \n enter first value ";
+    cin >> val1;
+    cout << "enter that methard you want + , - , / , *   ";
+    cin >> methord;
+    cout << "enter second value ";
+    cin >> val2;
+ 
+    // condition for check what opration to do
+    if (methord == "+")
+    {
+      result = val1 + val2;
+      cout << "your result is " << result;
+    }
+    else if (methord == "/")
+    {
+      result = val1 / val2;
+      cout << "your result is " << result;
+    }
+    else if (methord == "*")
+    {
+      result = val1 * val2;
+      cout << "your result is " << result;
+    }
+    else if (methord == "-")
+    {
+      result = val1 - val2;
+      cout << "your result is " << result;
+    }
+    else
+    {
+      cout << "please enter valid value or opration";
+    }
+
+    //  if the user want use  Calculator again or not
+
+    string demand;
+    cout << "\n If you want use calcultor again type yes in other case type no  ";
+    cin >> demand;
+
+    if (demand == "yes")
+    {
+      lop = true;
+      system("CLS");
+      cout<<"\n                                      Thanks for choise again \n ";
+    }
+    else
+    {
+      lop = false;
+       system("CLS");
+          cout<<"\n                                     Thanks for using \n ";
+    }
+  }
+}
+
+int main()
+{
+  // recall the function
+  Calculator();
+}
